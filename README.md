@@ -1,5 +1,6 @@
 # 2021cce
 ## 找零錢
+```C
 #include <stdio.h>
 int main()
 {
@@ -11,7 +12,9 @@ int main()
 	int coin1 = n%5;
 	printf("%d=50*", n);
 	printf("%d+5*%d+1*%d\n",coin50,coin5,coin1);
+```
 ## 因數個數
+```C
 #include <stdio.h>
 int main()
 {
@@ -23,4 +26,5 @@ int main()
 		}
 	printf("%d\n",sum)
 } 
+```
 
