@@ -73,3 +73,57 @@ int main()
 	
 }
 ```
+## 讀入整數反序列印
+```C
+#include <stdio.h>
+int main()
+{
+	int a[11];int n=0;
+	for(int i=0;i<10;i++){
+	scanf("%d",&a[i]);
+		if(a[i]==0)
+		break;
+		n++;
+	}
+	for(int i=n-1;i>=0;i--){
+	printf("%d ",a[i]);
+	}
+	printf("\n");
+
+
+}
+```
+## A的B次方函數
+```C
+#include <stdio.h>
+int MYPOWER(int a, int b)
+{
+int ans=1;
+for(int i=1;i<=b;i++)
+	ans=ans*a;
+	return ans;
+}
+int main(void)
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	printf("[%d]",MYPOWER(a,b));
+	return 0;
+}
+```
+## 漸增數列相加
+```C
+#include <stdio.h>
+int main()
+{
+	int n,ans=0;
+	scanf("%d",&n);
+	for(int i=1;i<n;i++){
+		ans+=i*(i+1);
+	}
+	printf("%d\n",ans);
+		
+
+
+}
+```
