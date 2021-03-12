@@ -142,7 +142,7 @@ int main()
 		}
 ```
 
-## 第十一題均標與前標計算
+## 均標與前標計算
 ```c
 #include <stdio.h>
 int main()
