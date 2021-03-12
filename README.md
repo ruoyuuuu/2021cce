@@ -127,6 +127,13 @@ int main()
 
 }
 ```
+## 判別正方形
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+		printf("Enter two 
 
 ## 第十一題均標與前標計算
 ```c
