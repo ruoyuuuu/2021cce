@@ -188,3 +188,88 @@ int main()
 		
 }
 ```
+## 大小寫轉換 
+```C
+#include <stdio.h>
+int main()
+{
+	char a[10];
+	scanf("%s",&a);
+	
+	for(int i=0;i<=9;i++)
+	{
+	if(a[i]>='0' && a[i]<='9')printf("%c",a[i]);
+	else if (a[i]>='A' && a[i]<= 'Z')printf("%c",a[i]+32);
+	else if (a[i]>='a' && a[i]<= 'z')printf("%c",a[i]-32);
+	else if(a[i]=='\0') break;
+	}
+	printf("\n");
+	}
+```
+## 計算幾週與幾天
+```C
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	printf("%d %d",n/7,n%7);
+	printf("\n");
+}
+```
+## 計程車資計算 
+```C
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	if(n<=2000)
+	printf("100");
+	else if(n>2000)
+	printf("%d",(n-2000)/500*5+105);
+	printf("\n");
+}
+```
+## 兩數間可被5整除的整數
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b,temp;
+	scanf("%d%d",&a,&b);
+	if(a>b)
+	{
+		temp=a;
+		a=b;
+		b=temp;
+	}
+	for(int i=a;i<=b;i++){
+		if(i%5==0) printf("%d\n",i);
+
+	}
+}
+```
+## 整數間最大距離
+```C
+#include <stdio.h>
+int main()
+{
+	int a, b, c;
+	scanf("%d%d%d",&a,&b,&c);
+	if(a-b>a-c &&a-b>b-c && a-b>c-a &&a-b>c-b && a-b>b-a)
+	printf("%d",a-b);
+	else if(a-c>a-b &&a-c>b-c && a-c>c-a &&a-c>c-b && a-c>b-a)
+	printf("%d",a-c);
+	else if(b-c>a-b &&b-c>a-c && b-c>c-a &&b-c>c-b && b-c>b-a)
+	printf("%d",b-c);
+	else if(c-a>a-b &&c-a>b-c && c-a>a-c &&c-a>c-b && c-a>b-a)
+	printf("%d",c-a);
+	else if(c-b>a-b &&c-b>b-c && c-b>c-a &&c-b>a-c && c-b>b-a)
+	printf("%d",c-b);
+	else if(b-a>a-b &&b-a>b-c && b-a>c-a &&b-a>c-b && b-a>a-c)
+	printf("%d",b-a);
+	printf("\n");
+	
+}
+```
