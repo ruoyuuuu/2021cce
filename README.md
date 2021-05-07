@@ -700,3 +700,265 @@ int main()
 	printf("%d=50*%d+10*%d+5*%d+1*%d",n,a,b,c,d);
 }
 ```
+## 最大公因數gcd 
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b,ans;
+	printf("Enter two integers: \n");
+	scanf("%d%d",&a,&b);
+	if(a>b){
+	for(int i=1;i<=b;i++){
+		if(a%i==0&&b%i==0)
+		ans=i;
+		}
+		printf("The greatest common divisor of %d and %d is %d\n",a,b,ans);
+		}
+		
+	else if(a<b){
+	for(int i=1;i<=a;i++){
+		if(a%i==0&&b%i==0)
+		ans=i;
+		}
+		printf("The greatest common divisor of %d and %d is %d\n",a,b,ans);
+		}
+		}
+```
+## 字串長度
+```C
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char a[100],b[100];
+	scanf("%s %s",&a,&b);
+	int lena,lenb;
+	lena=strlen(a);//字串a的長度
+	lenb=strlen(b);
+	if(lena>lenb) printf("1");
+	else if(lenb>lena) printf("-1");
+	else {printf("%d",strcmp(a,b));}
+}
+```
+## 函數判斷質數
+```C
+#include <iostream>
+using namespace std;
+int prime (int n)
+{
+	int i;
+	for(i=2;i<n;i++){
+	if(n%i==0)break;
+	}
+	if(i==n) return 1;
+	else return 0;
+	
+}
+
+int main(){
+  int n;cin>>n;
+  cout<<"["<<prime(n)<<"]";
+  return 0;
+}
+/* 上方 C++ 的 main 函數 等價於 下方 C 的 main 函數
+int main(void){
+    int n;
+    scanf("%d", &n);
+    printf("[%d]", prime(n));
+    return 0;
+    }
+```
+## 判斷迴文
+```C
+#include <stdio.h>
+#include <string.h>
+char a[10000];
+int main()
+{
+	scanf("%s",&a);
+	int i;
+	int len;
+	len=strlen(a);
+	for( i=0;i<(len/2);i++){
+		if(a[i] !=a[len-1-i])break;
+		}
+		if (i==(len/2))printf("YES");
+		else printf("NO");
+	}
+```
+## 計算餘數及列印
+```C
+#include <stdio.h>
+int main()
+{
+int x,y;
+scanf("%d%d",&x,&y);
+printf("Enter two numbers: ");
+printf("The remainder is %d\n",x%y);
+}
+```
+## 判別正方形
+```C
+#include <stdio.h>
+int main()
+{
+int x,y;
+printf("Enter two numbers:  ");
+scanf("%d%d",&x,&y);
+if(x==y) printf("It is a square ");
+else printf("It is not a square ");
+}
+```
+## 將一連串整數相乘
+```C
+#include <stdio.h>
+int main()
+{
+	int a,ans=1;
+	printf("Enter the number of values to be processed: ");
+	scanf("%d",&a);
+	for(int i=0;i<a;i++)
+	{
+		printf("Enter a value: ");
+		int b;
+		scanf("%d",&b);
+		ans*=b;
+	}
+	printf("Product of the %d values is %d",a,ans);
+}
+```
+## 平年月份的天數 
+```C
+#include <stdio.h>
+int main()
+{
+	int d[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+	int a;
+	scanf("%d",&a);
+	printf("%d",d[a]);
+}
+```
+## 兩數平方差
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	printf("%d",a*a-b*b);
+}
+```
+## 零錢總額
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b,c;
+	scanf("%d%d%d",&a,&b,&c);
+	printf("%d",a*50+b*5+c);
+}
+```
+## 幾日為星期幾 
+```C
+#include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	printf("%d",(a-1)%7);
+	}
+```
+## 整數二元四則運算 
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b;char c;
+	scanf("%d %c %d",&a,&c,&b);
+	if(c=='+')printf("%d",a+b);
+	if(c=='-')printf("%d",a-b);
+	if(c=='*')printf("%d",a*b);
+	if(c=='/')printf("%d",a/b);\
+}
+```
+## 兩數間可被7整除的數
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	for(int i=a;i<=b;i++){
+	if(i%7==0)printf("%d ",i);
+	}
+}
+```
+## 奇數之和
+```C
+#include <stdio.h>
+int main()
+{
+	int n,ans=0;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++){
+		if(i%2!=0)ans+=i;
+	}
+	printf("%d",ans);
+}
+```
+## 利用自訂函式最大值max與最小值min求出兩者之差
+```C
+#include<iostream>
+using namespace std;
+int max(int a,int b,int c,int d)
+{
+	int max;
+	if(a>b && a>c && a>d) max=a;
+	else if(b>a && b>c && b>d)max=b;
+	else if(c>a && c>b && c>d)max=c;
+	else max=d;
+	return max;
+}
+int min(int a,int b,int c,int d)
+{
+	int min;
+	if(a<b && a<c && a<d) min=a;
+	else if(b<a && b<c && b<d)min=b;
+	else if(c<a && c<b && c<d)min=c;
+	else min=d;
+	return min;
+}
+int main(){
+  int a,b,c,d;cin>>a>>b>>c>>d;
+  cout<<(max(a,b,c,d)-min(a,b,c,d));
+  return 0;
+}
+/* 上方C++ main 函式 等同於 下方 C 的 main 函式
+int main(void){
+  int a, b, c, d;
+  scanf("%d %d %d %d", &a, &b, &c, &d);
+  printf("%d",  max(a,b,c,d) - min(a,b,c,d) );
+  return 0;
+}
+```
+## 字串中的數字個數 
+```C
+#include <stdio.h>
+int main()
+{
+	char a[80];
+	int ans=0;
+	scanf("%s",&a);
+	int i=0;
+	while (a[i]!='\0'){
+		if(a[i]>='0' && a[i]<='9')ans++;
+			i++;
+		}
+		printf("%d",ans);
+}
+```
+
+
+
+
