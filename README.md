@@ -979,6 +979,118 @@ int main()
 		}
 }
 ```
+## 數字個數
+```C
+#include <stdio.h>
+int main()
+{
+	int a,ans=0;
+	while (scanf("%d",&a)!=EOF)
+	{
+	ans++;
+	}
+	printf("%d",ans-1);
+}
+```
+## 剩餘啤酒有幾手又幾瓶
+```C
+#include <stdio.h>
+int main()
+{
+	int p,d;
+	scanf("%d%d",&p,&d);
+	
+	printf("%d %d",(p-(d*6))/6,p%6);
+}
+```
+## 三數最小
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b,c;
+	scanf("%d%d%d",&a,&b,&c);
+	if(a<b && a<c)
+	printf("%d\n",a);
+	else if(b<a && b<c)
+	printf("%d\n",b);
+	else printf("%d\n",c);
+}
+```
+## 計算立方值
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b,c,d,e,f;
+	scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);
+	printf("%d\n%d\n%d\n%d\n%d\n%d\n",a*a*a,b*b*b,c*c*c,d*d*d,e*e*e,f*f*f);
+}
+```
+## 判斷平方數
+```C
+#include <stdio.h>
+int main()
+{
+	int n,ans=0;
+	scanf("%d",&n);
+	for(int i=1;i<n;i++){
+	if(n==i*i) ans=i;}
+	printf("%d",ans);
+		
+}
+```
+## 計算質數個數 
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b,count=0;
+	int j;
+	scanf("%d %d",&a,&b);
+	for(int i=a;i<=b;i++){
+		for( j=2;j<i;j++){
+			if(i%j==0)break;}
+			if(j==i)
+			count++;
+		}
+		printf("%d",count);
+	}
+```
+## 三數組合
+```C
+#include <stdio.h>
+int main()
+{
+	int a[3],i,j,temp;
+	for(i=0;i<3;i++){
+		scanf("%d",&a[i]);}
+		for(i=0;i<3;i++)
+		{
+		for(j=i+1;j<3;j++)
+		{
+		if(a[i]<a[j])
+		{
+		temp=a[j];
+		a[j]=a[i];
+		a[i]=temp;
+	}
+	}
+	}
+	printf("%d",a[0]*100+a[1]*10+a[2]+1);
+}
+```
+## 找千位數
+```C
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int d=n/1000%10;
+	printf("%d",d);
+}
+```
 
 
 
